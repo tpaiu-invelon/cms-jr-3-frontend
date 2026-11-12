@@ -1,6 +1,6 @@
 "use strict";
 
-const API_BASE = "/api/v1";
+const API_BASE = "https://cms-jr-3-backend-dvvqyurj7-reto4-invelon.vercel.app/api/v1/";
 const TOKEN_KEY = "cms_token";
 
 const sections = {
