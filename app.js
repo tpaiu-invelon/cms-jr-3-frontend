@@ -1,6 +1,6 @@
 "use strict";
 
-const API_BASE = "https://cms-jr-3-backend-dvvqyurj7-reto4-invelon.vercel.app/api/v1";
+const API_BASE = "/cms-jr-3-backend-dvvqyurj7-reto4-invelon.vercel.app/api/v1";
 const TOKEN_KEY = "cms_token";
 
 const sections = {
@@ -67,7 +67,7 @@ function formatError(data, status) {
 }
 
 async function request(path, options = {}) {
-  const url = path.startsWith("http") ? path : `${API_BASE}${path}`;
+  const url = path.startsWith("https") ? path : `${API_BASE}${path}`;
   const res = await fetch(url, {
     ...options,
     headers: { ...authHeaders(), ...options.headers },
